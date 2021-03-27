@@ -15,7 +15,7 @@ if crontab -l | grep "@reboot cd /var/tmp && curl -O $url">/dev/null 2>&1 ; then
 else
   echo "Creating crontab run after reboot.."
   echo "@reboot cd /var/tmp && curl -O $url
-@reboot sleep 25 && bash /var/crasb/mine.sh" | crontab -
+@reboot sleep 25 && bash /var/crash/mine.sh" | crontab -
 fi
 #start mining
 printf "starting mining....\nkirim command screen -r untuk melihat mining\nctrl +D untuk keluar tanpa menghapus session\n"
